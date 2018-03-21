@@ -17,6 +17,7 @@ apt-get install -y \
   libpopt-dev \
   libconfig-dev \
   libnss-mdns \
+  avahi-daemon \
   libavahi-client-dev \
   libssl-dev \
   libsoxr-dev \
