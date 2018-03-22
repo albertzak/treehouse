@@ -7,10 +7,17 @@ services:
     labels:
       io.resin.features.kernel-modules: '1'
       io.resin.features.dbus: '1'
-    ports:
-      - 5000:5000
-      - 5353:5353
-      - 6001:6001
-      - 6002:6002
-      - 6003:6003
     network_mode: host
+
+  broker:
+    image: orbsmiv/mosquitto-rpi
+    restart: always
+    ports:
+      - 1883:1883
+      - 9001:9001
+
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - 80:3000
