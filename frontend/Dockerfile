@@ -5,7 +5,7 @@ RUN yarn
 COPY . .
 RUN yarn build
 
-FROM resin/armfh-alpine:3.6
+FROM resin/armhf-alpine:3.6
 RUN apk add --update nginx && rm -rf /var/cache/apk/*
 ADD nginx.conf /etc/nginx/nginx.conf
 RUN mkdir /www-data
