@@ -22,5 +22,6 @@ apt-get install -y \
   libssl-dev \
   libsoxr-dev \
   ca-certificates \
+  alsa-utils
 
 rm -rf /var/lib/apt/lists/*

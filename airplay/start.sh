@@ -13,6 +13,9 @@ avahi-daemon --no-drop-root --daemonize
 
 sleep 1s
 
+echo "--> Available audio devices"
+aplay -l
+
 echo "--> Starting shairport-sync"
 shairport-sync -vvv -a "$AIRPLAY_NAME" -- -d hw:$OUTPUT_NAME
 
