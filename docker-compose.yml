@@ -16,6 +16,14 @@ services:
       - 1883:1883
       - 9001:9001
 
+  homebridge:
+    build: ./homebridge
+    privileged: true
+    restart: always
+    labels:
+      io.resin.features.dbus: '1'
+    network_mode: host
+
   frontend:
     build: ./frontend
     restart: always
