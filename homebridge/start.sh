@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cp config.json /data/.homebridge/config.json
+mkdir -p /data/.homebridge/
+cp /usr/src/app/config.json /data/.homebridge/config.json
 
 DEBUG=* homebridge \
   --debug \
