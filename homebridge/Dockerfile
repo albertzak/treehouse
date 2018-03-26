@@ -1,4 +1,4 @@
-FROM node:8
+FROM resin/raspberrypi3-node:8
 
 ENV INITSYSTEM on
 
