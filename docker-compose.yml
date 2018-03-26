@@ -1,13 +1,13 @@
 version: '2'
 services:
-  # airplay:
-  #   build: ./airplay
-  #   privileged: true
-  #   restart: always
-  #   labels:
-  #     io.resin.features.kernel-modules: '1'
-  #     io.resin.features.dbus: '1'
-  #   network_mode: host
+  airplay:
+    build: ./airplay
+    privileged: true
+    restart: always
+    labels:
+      io.resin.features.kernel-modules: '1'
+      io.resin.features.dbus: '1'
+    network_mode: host
 
   broker:
     image: orbsmiv/mosquitto-rpi
