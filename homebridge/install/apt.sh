@@ -17,7 +17,7 @@ apt-get install -y \
   net-tools \
   libnss-mdns \
   avahi-daemon \
-  avahi-discover
+  avahi-discover \
   ca-certificates
 
 rm -rf /var/lib/apt/lists/*
