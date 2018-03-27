@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-buildpack-deps
+FROM resin/raspberrypi3-node
 
 WORKDIR /usr/src/app/
 
@@ -8,4 +8,9 @@ RUN ./wiringpi.sh
 COPY install/433utils.sh .
 RUN ./433utils.sh
 
-CMD ["/usr/src/app/433Utils/RPi_utils/RFSniffer"]
+COPY package.json .
+RUN npm install --production
+
+COPY . .
+
+CMD ["/usr/src/app/start.sh"]

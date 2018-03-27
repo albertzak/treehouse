@@ -18,6 +18,8 @@ services:
     build: ./rcswitch
     restart: always
     privileged: true
+    depends_on:
+      - broker
 
   homebridge:
     build: ./homebridge
