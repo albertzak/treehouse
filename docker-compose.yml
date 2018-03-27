@@ -7,6 +7,13 @@ services:
       - 1883:1883
       - 9001:9001
 
+  debug:
+    image: orbsmiv/mosquitto-rpi
+    restart: always
+    depends_on:
+      - broker
+    cmd: ["mosquitto_sub", "-h", "broker", "-t", "#"]
+
   homebridge:
     build: ./homebridge
     privileged: true

@@ -48,8 +48,8 @@
       "url": "mqtt://broker",
       "caption": "Hallway Light",
       "topics": {
-        "statusGet": "switch/get",
-        "statusSet": "switch/set"
+        "statusGet": "baumg/hallway/light/status",
+        "statusSet": "baumg/hallway/light/status"
       },
       "onValue": "ON",
       "offValue": "OFF"
