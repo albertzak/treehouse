@@ -17,10 +17,12 @@ services:
     depends_on:
       - broker
     volumes:
-      - 'resin-data:/data'
+      - 'homebridge:/data'
 
   frontend:
     build: ./frontend
     restart: always
     ports:
       - 80:80
+volumes:
+  homebridge:
