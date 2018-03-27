@@ -12,7 +12,7 @@ services:
     restart: always
     depends_on:
       - broker
-    cmd: ["mosquitto_sub", "-h", "broker", "-t", "#"]
+    command: ["mosquitto_sub", "-h", "broker", "-t", "#"]
 
   homebridge:
     build: ./homebridge
@@ -31,5 +31,6 @@ services:
     restart: always
     ports:
       - 80:80
+
 volumes:
   homebridge:
