@@ -1,8 +1,10 @@
 const mqtt = require('mqtt')
-const childProcess = require('child_process')
+const rcswitch = require('rcswitch')
+
+rcswitch.enableTransmit(0)
 
 const sendCode = code => {
-  return childProcess.execFile('./433Utils/RPi_utils/codesend', [code])
+  return rcswitch.send(code)
 }
 
 const client = mqtt.connect('mqtt://broker')
