@@ -20,7 +20,8 @@ services:
     restart: always
     labels:
       io.resin.features.dbus: '1'
-    network_mode: host
+    ports:
+      - 51826:51826
     depends_on:
       - broker
     volumes:
