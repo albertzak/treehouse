@@ -7,19 +7,28 @@ const client = mqtt.connect('mqtt://broker')
 
 client.on('connect', () => {
   console.log('connected')
-  client.subscribe('#')
+  client.subscribe('rcswitch/#')
   client.publish('presence', 'rcswitch')
 })
 
-client.on('message', (topic, message) => {
-  console.log('topic:', topic, 'message:', message.toString())
-  if (message.toString() === 'ON') {
-    console.log('sending ON')
-    return rcswitch.switchOn('00001', 1)
-  }
+client.on('message', (topic, buffer) => {
+  const message = buffer.toString()
+  console.log({ topic, message })
 
-  if (message.toString() === 'OFF') {
-    console.log('sending OFF')
-    return rcswitch.switchOff('00001', 1)
+  const [ _, type, group, switchId ] = topic.split('/')
+
+  const fn = send[type][message]
+  if (fn) {
+    const result = fn(group, switchId)
+    console.log({ type, group, switchId, result })
+  } else {
+    console.error('Not implemented')
   }
 })
+
+const send = {
+  A: {
+    ON: (g, s) => rcswitch.switchOn(g, s),
+    OFF: (g, s) => rcswitch.switchOff(g, s)
+  }
+}

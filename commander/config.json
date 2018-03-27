@@ -1,0 +1,19 @@
+{
+  "rcswitch": [
+    {
+      "name": "Hallway Light",
+      "group": "00001",
+      "switch": 1
+    },
+    {
+      "name": "Glob Light",
+      "group": "00001",
+      "switch": 2
+    },
+    {
+      "name": "Big Light",
+      "group": "00001",
+      "switch": 4
+    }
+  ]
+}

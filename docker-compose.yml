@@ -7,6 +7,14 @@ services:
       - 1883:1883
       - 9001:9001
 
+  commander:
+    build: ./commander
+    restart: always
+    depends_on:
+      - broker
+    volumes:
+      - 'homebridge:/data/.homebridge'
+
   debug:
     image: orbsmiv/mosquitto-rpi
     restart: always
@@ -30,8 +38,9 @@ services:
     network_mode: host
     depends_on:
       - broker
+      - commander
     volumes:
-      - 'homebridge:/data'
+      - 'homebridge:/data/.homebridge'
 
   frontend:
     build: ./frontend

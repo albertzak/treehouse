@@ -12,9 +12,6 @@ avahi-daemon --no-drop-root --daemonize
 sleep 1s
 
 echo "--> Starting homebridge"
-mkdir -p /data/.homebridge/
-cp /usr/src/app/config.json /data/.homebridge/config.json
-
 DEBUG=* homebridge \
   --debug \
   --user-storage-path /data/.homebridge \
