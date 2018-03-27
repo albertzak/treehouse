@@ -1,6 +1,8 @@
 const fs = require('fs')
 const config = require('./config.json')
 
+console.log('--> Generating config')
+
 const accessories = config.rcswitch.map(rc => {
   const topic = [
     'rc',
@@ -34,4 +36,10 @@ const homebridge = {
   accessories
 }
 
-fs.writeFileSync('/data/.homebridge/config.js', JSON.stringify(homebridge, null, 2))
+const toJSON = obj => JSON.stringify(obj, null, 2)
+
+console.log('--> Generated config', toJSON(homebridge))
+
+fs.writeFileSync('/data/.homebridge/config.js', toJSON(homebridge))
+
+console.log('--> Wrote config')
