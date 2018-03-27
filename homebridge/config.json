@@ -45,7 +45,7 @@
     {
       "accessory": "mqttswitch",
       "name": "Hallway Light",
-      "url": "mqtt://broker",
+      "url": "mqtt://localhost",
       "caption": "Hallway Light",
       "topics": {
         "statusGet": "baumg/hallway/light/status",
