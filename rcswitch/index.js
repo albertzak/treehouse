@@ -1,5 +1,5 @@
 const mqtt = require('mqtt')
-const childProcess = require('child-process')
+const childProcess = require('child_process')
 
 const sendCode = code => {
   return childProcess.execFile('./433Utils/RPi_utils/codesend', [code])
