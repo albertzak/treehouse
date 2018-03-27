@@ -15,12 +15,12 @@ client.on('connect', () => {
 
 client.on('message', (topic, message) => {
   console.log('topic:', topic, 'message:', message.toString())
-  if (message === 'ON') {
+  if (message.toString() === 'ON') {
     console.log('sending ON')
     return sendCode('5571921')
   }
 
-  if (message === 'OFF') {
+  if (message.toString() === 'OFF') {
     console.log('sending OFF')
     return sendCode('5571924')
   }
