@@ -2,7 +2,7 @@
 
 set -e
 
-git clone –recursive git://github.com/ninjablocks/433Utils.git
+git clone --recurse-submodules git://github.com/ninjablocks/433Utils.git
 pushd 433Utils/RPi_utils
 make
 popd
