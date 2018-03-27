@@ -5,7 +5,7 @@ WORKDIR /usr/src/app/
 COPY install/wiringpi.sh .
 RUN ./wiringpi.sh
 
-COPY install/443utils.sh .
-RUN ./443utils.sh
+COPY install/433utils.sh .
+RUN ./433utils.sh
 
-CMD ["/usr/src/app/443Utils/RPi_utils/RFSniffer"]
+CMD ["/usr/src/app/433Utils/RPi_utils/RFSniffer"]
