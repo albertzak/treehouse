@@ -41,6 +41,18 @@
       "device": {
         "mac": "18:cf:5e:c6:d9:5b"
       }
+    },
+    {
+      "accessory": "mqttswitch",
+      "name": "Hallway Light",
+      "url": "mqtt://broker",
+      "caption": "Hallway Light",
+      "topics": {
+        "statusGet": "switch/get",
+        "statusSet": "switch/set"
+      },
+      "onValue": "ON",
+      "offValue": "OFF"
     }
   ],
   "platforms": [

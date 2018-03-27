@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "homebridge-people-plus": "^0.1.1"
+    "homebridge-people-plus": "^0.1.1",
+    "homebridge-mqttswitch": "^0.0.3"
   }
 }
