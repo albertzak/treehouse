@@ -28,7 +28,7 @@ client.on('message', (topic, buffer) => {
 
 const send = {
   A: {
-    ON: (g, s) => rcswitch.switchOn(g, s),
-    OFF: (g, s) => rcswitch.switchOff(g, s)
+    ON: (g, s) => rcswitch.switchOn(g, parseInt(s, 10)),
+    OFF: (g, s) => rcswitch.switchOff(g, parseInt(s, 10))
   }
 }
