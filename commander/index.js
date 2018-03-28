@@ -41,7 +41,7 @@ const toJSON = obj => JSON.stringify(obj, null, 2) + '\n'
 
 console.log('--> Generated config', toJSON(homebridge))
 
-fs.writeFileSync('/data/homebridge/config.js', toJSON(homebridge))
+fs.writeFileSync('/data/homebridge/config.json', toJSON(homebridge))
 
 console.log('--> Wrote config')
 
