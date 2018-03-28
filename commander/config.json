@@ -14,6 +14,11 @@
       "name": "Big Light",
       "group": "00001",
       "switch": 4
+    },
+    {
+      "name": "Living",
+      "group": "00010",
+      "switch": 1
     }
   ]
 }
