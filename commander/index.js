@@ -1,5 +1,6 @@
 const fs = require('fs')
 const config = require('./config.json')
+const server = require('./server.js')
 
 console.log('--> Generating config')
 
@@ -43,3 +44,5 @@ console.log('--> Generated config', toJSON(homebridge))
 fs.writeFileSync('/data/.homebridge/config.js', toJSON(homebridge))
 
 console.log('--> Wrote config')
+
+server()
