@@ -7,7 +7,7 @@ const client = mqtt.connect('mqtt://broker')
 
 client.on('connect', () => {
   console.log('connected')
-  client.subscribe('rcswitch/#')
+  client.subscribe('rc/#')
   client.publish('presence', 'rcswitch')
 })
 
