@@ -3,7 +3,7 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
-export default () => {
+module.exports = () => {
   app.get('/', (req, res) =>
     res.send('Hello World!')
   )
