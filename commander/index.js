@@ -29,7 +29,7 @@ const accessories = config.rcswitch.map(rc => {
 const homebridge = {
   bridge: {
     name: 'Homebridge',
-    username: 'CC:22:3D:E1:33:71',
+    username: 'CC:22:3D:E1:33:72',
     port: 51826,
     pin: process.env.HOMEBRIDGE_PIN || '010-12-013'
   },
@@ -37,11 +37,11 @@ const homebridge = {
   accessories
 }
 
-const toJSON = obj => JSON.stringify(obj, null, 2)
+const toJSON = obj => JSON.stringify(obj, null, 2) + '\n'
 
 console.log('--> Generated config', toJSON(homebridge))
 
-fs.writeFileSync('/data/.homebridge/config.js', toJSON(homebridge))
+fs.writeFileSync('/data/homebridge/config.js', toJSON(homebridge))
 
 console.log('--> Wrote config')
 

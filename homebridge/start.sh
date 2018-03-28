@@ -14,5 +14,5 @@ sleep 1s
 echo "--> Starting homebridge"
 DEBUG=* homebridge \
   --debug \
-  --user-storage-path /data/.homebridge \
+  --user-storage-path /data/homebridge \
   --plugin-path /usr/src/app/node_modules/
