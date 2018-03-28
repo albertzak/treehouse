@@ -20,7 +20,7 @@ services:
     restart: always
     depends_on:
       - broker
-    command: ["mosquitto_sub", "-h", "broker", "-t", "#"]
+    command: ["mosquitto_sub", "-h", "broker", "-t", "#", "-v"]
 
   rcswitch:
     build: ./rcswitch
