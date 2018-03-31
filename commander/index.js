@@ -37,7 +37,7 @@ const homebridge = {
   accessories: [
     ...accessories,
     {
-      accessory: 'rgb-mqtt',
+      accessory: 'RGBMQTTAccessory',
       name: 'Test',
       url: 'mqtt://localhost',
       topic: 'test/rgb'
