@@ -34,7 +34,15 @@ const homebridge = {
     pin: process.env.HOMEBRIDGE_PIN || '010-12-013'
   },
   description: 'Homebridge',
-  accessories
+  accessories: [
+    ...accessories,
+    {
+      accessory: 'rgb-mqtt',
+      name: 'Test',
+      url: 'mqtt://localhost',
+      topic: 'test/rgb'
+    }
+  ]
 }
 
 const toJSON = obj => JSON.stringify(obj, null, 2) + '\n'
