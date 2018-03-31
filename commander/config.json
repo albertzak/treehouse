@@ -19,6 +19,11 @@
       "name": "Living",
       "group": "00010",
       "switch": 1
+    },
+    {
+      "name": "Color",
+      "group": "00010",
+      "switch": 2
     }
   ]
 }
