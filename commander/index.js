@@ -36,26 +36,37 @@ const homebridge = {
   description: 'Homebridge',
   accessories: [
     ...accessories,
+    {
+      accessory: 'mqtt-dimmer',
+      name: 'Dimmer',
+      url: 'mqtt://localhost',
+      onValue: 'ON',
+      offValue: 'OFF',
+      topics: {
+        statusGet: 'dimmer/0/get',
+        statusSet: 'dimmer/0/set'
+      }
+    }
     // {
     //   accessory: 'RGBMQTTAccessory',
     //   name: 'Test',
     //   url: 'mqtt://localhost',
     //   topic: 'test/rgb'
     // },
-    {
-      accessory: 'BlindsMQTT',
-      name: 'Test Curtains',
-      mqttBrokerUrl: 'mqtt://localhost',
-      mqttMainTopic: 'test/curtains',
-      mqttSetTopics: {
-        targetPosition: 'set/targetPosition'
-      },
-      mqttGetTopics: {
-        currentPosition: 'get/currentPosition',
-        positionState: 'get/positionState',
-        targetPosition: 'get/targetPosition'
-      }
-    }
+    // {
+    //   accessory: 'BlindsMQTT',
+    //   name: 'Test Curtains',
+    //   mqttBrokerUrl: 'mqtt://localhost',
+    //   mqttMainTopic: 'test/curtains',
+    //   mqttSetTopics: {
+    //     targetPosition: 'set/targetPosition'
+    //   },
+    //   mqttGetTopics: {
+    //     currentPosition: 'get/currentPosition',
+    //     positionState: 'get/positionState',
+    //     targetPosition: 'get/targetPosition'
+    //   }
+    // }
   ]
 }
 
