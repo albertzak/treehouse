@@ -46,13 +46,13 @@ const homebridge = {
         statusGet: 'dimmer/0/get',
         statusSet: 'dimmer/0/set'
       }
+    },
+    {
+      accessory: 'RGBMQTTAccessory',
+      name: 'Bathroom Color',
+      url: 'mqtt://localhost',
+      topic: 'rgb/0'
     }
-    // {
-    //   accessory: 'RGBMQTTAccessory',
-    //   name: 'Test',
-    //   url: 'mqtt://localhost',
-    //   topic: 'test/rgb'
-    // },
     // {
     //   accessory: 'BlindsMQTT',
     //   name: 'Test Curtains',
