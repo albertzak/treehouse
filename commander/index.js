@@ -38,7 +38,7 @@ const homebridge = {
     ...accessories,
     {
       accessory: 'mqtt-dimmer',
-      name: 'Dimmer',
+      name: 'Wohnzimmer Stehlampe',
       url: 'mqtt://localhost',
       onValue: 'ON',
       offValue: 'OFF',
@@ -49,7 +49,7 @@ const homebridge = {
     },
     {
       accessory: 'RGBMQTTAccessory',
-      name: 'Bathroom Color',
+      name: 'TEST Bathroom Color',
       url: 'mqtt://localhost',
       topic: 'rgb/0'
     }

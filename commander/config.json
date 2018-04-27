@@ -1,27 +1,22 @@
 {
   "rcswitch": [
     {
-      "name": "Hallway Light",
+      "name": "Vorzimmerlampe",
       "group": "00001",
       "switch": 1
     },
     {
-      "name": "Glob Light",
+      "name": "Schlafzimmer Nachttischlampe",
       "group": "00001",
       "switch": 2
     },
     {
-      "name": "Big Light",
+      "name": "Schlafzimmer Stehlampe",
       "group": "00001",
       "switch": 4
     },
     {
-      "name": "Living",
-      "group": "00010",
-      "switch": 1
-    },
-    {
-      "name": "Color",
+      "name": "Wohnzimmer Farblicht",
       "group": "00010",
       "switch": 2
     }
