@@ -52,21 +52,21 @@ const homebridge = {
       name: 'TEST Bathroom Color',
       url: 'mqtt://localhost',
       topic: 'rgb/0'
+    },
+    {
+      accessory: 'BlindsMQTT',
+      name: 'Test Curtains',
+      mqttBrokerUrl: 'mqtt://localhost',
+      mqttMainTopic: 'curtains/0',
+      mqttSetTopics: {
+        targetPosition: 'set/targetPosition'
+      },
+      mqttGetTopics: {
+        currentPosition: 'get/currentPosition',
+        positionState: 'get/positionState',
+        targetPosition: 'get/targetPosition'
+      }
     }
-    // {
-    //   accessory: 'BlindsMQTT',
-    //   name: 'Test Curtains',
-    //   mqttBrokerUrl: 'mqtt://localhost',
-    //   mqttMainTopic: 'test/curtains',
-    //   mqttSetTopics: {
-    //     targetPosition: 'set/targetPosition'
-    //   },
-    //   mqttGetTopics: {
-    //     currentPosition: 'get/currentPosition',
-    //     positionState: 'get/positionState',
-    //     targetPosition: 'get/targetPosition'
-    //   }
-    // }
   ]
 }
 
