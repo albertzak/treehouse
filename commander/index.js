@@ -55,7 +55,7 @@ const homebridge = {
     },
     {
       accessory: 'BlindsMQTT',
-      name: 'Test Curtains',
+      name: 'Vorhang',
       mqttBrokerUrl: 'mqtt://localhost',
       mqttMainTopic: 'curtains/0',
       mqttSetTopics: {

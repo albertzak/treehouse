@@ -1,22 +1,32 @@
 {
   "rcswitch": [
     {
-      "name": "Vorzimmerlampe",
+      "name": "Vorzimmerlampe (Hallway)",
       "group": "00001",
       "switch": 1
     },
     {
-      "name": "Schlafzimmer Nachttischlampe",
+      "name": "Nachttischlampe (Glob)",
       "group": "00001",
       "switch": 2
     },
     {
-      "name": "Schlafzimmer Stehlampe",
+      "name": "Küche (Kitchen)",
+      "group": "00001",
+      "switch": 3
+    },
+    {
+      "name": "Stehlampe (Big)",
       "group": "00001",
       "switch": 4
     },
     {
-      "name": "Wohnzimmer Farblicht",
+      "name": "Lichterkette Balkon (Balcony)",
+      "group": "00010",
+      "switch": 1
+    },
+    {
+      "name": "Farblicht (Color)",
       "group": "00010",
       "switch": 2
     }
