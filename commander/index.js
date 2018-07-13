@@ -48,6 +48,17 @@ const homebridge = {
       }
     },
     {
+      accessory: 'mqtt-dimmer',
+      name: 'Nachttischlampe (Glob)',
+      url: 'mqtt://localhost',
+      onValue: 'ON',
+      offValue: 'OFF',
+      topics: {
+        statusGet: 'dimmer/2/get',
+        statusSet: 'dimmer/2/set'
+      }
+    },
+    {
       accessory: 'RGBMQTTAccessory',
       name: 'TEST Bathroom Color',
       url: 'mqtt://localhost',
