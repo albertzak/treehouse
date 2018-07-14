@@ -49,7 +49,18 @@ const homebridge = {
     },
     {
       accessory: 'mqtt-dimmer',
-      name: 'Nachttischlampe (Glob)',
+      name: 'TEST Dimmer 1',
+      url: 'mqtt://localhost',
+      onValue: 'ON',
+      offValue: 'OFF',
+      topics: {
+        statusGet: 'dimmer/1/get',
+        statusSet: 'dimmer/1/set'
+      }
+    },
+    {
+      accessory: 'mqtt-dimmer',
+      name: 'TEST Dimmer 2',
       url: 'mqtt://localhost',
       onValue: 'ON',
       offValue: 'OFF',

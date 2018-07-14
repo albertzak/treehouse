@@ -6,6 +6,11 @@
       "switch": 1
     },
     {
+      "name": "Nachttischlampe (Glob)",
+      "group": "00001",
+      "switch": 2
+    },
+    {
       "name": "Küche (Kitchen)",
       "group": "00001",
       "switch": 3
