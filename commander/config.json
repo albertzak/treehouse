@@ -24,6 +24,11 @@
       "name": "Farblicht (Color)",
       "group": "00010",
       "switch": 2
+    },
+    {
+      "name": "Stehlampe Esstisch",
+      "group": "00001",
+      "switch": 2
     }
   ]
 }
