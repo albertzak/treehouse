@@ -6,11 +6,6 @@
       "switch": 1
     },
     {
-      "name": "Nachttischlampe (Glob)",
-      "group": "00001",
-      "switch": 2
-    },
-    {
       "name": "Küche (Kitchen)",
       "group": "00001",
       "switch": 3
@@ -22,8 +17,8 @@
     },
     {
       "name": "Lichterkette Balkon (Balcony)",
-      "group": "00010",
-      "switch": 1
+      "group": "00001",
+      "switch": 2
     },
     {
       "name": "Farblicht (Color)",
