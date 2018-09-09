@@ -1,9 +1,7 @@
 {
   "dependencies": {
-    "homebridge-people-plus": "^0.1.1",
     "homebridge-mqttswitch": "^0.0.3",
     "homebridge-rgb-mqtt": "^0.0.1",
-    "homebridge-mqtt-blinds": "^1.0.4",
     "homebridge-mqtt-dimmer": "^0.0.1"
   }
 }
