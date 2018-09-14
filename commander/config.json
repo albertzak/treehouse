@@ -27,8 +27,8 @@
     },
     {
       "name": "Stehlampe Esstisch",
-      "group": "00001",
-      "switch": 2
+      "group": "00010",
+      "switch": 1
     }
   ]
 }
