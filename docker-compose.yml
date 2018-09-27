@@ -42,11 +42,28 @@ services:
     volumes:
       - 'homebridge:/data/homebridge'
 
-  frontend:
-    build: ./frontend
+  pihole:
+    image: pihole/pihole:v4.0_aarch64
     restart: always
     ports:
-      - 80:80
+      - '53:53/tcp'
+      - '53:53/udp'
+      - '67:67/udp'
+      - '80:80'
+      - '443:443'
+    environment:
+      - ServerIP=10.0.0.10
+      - TZ=Europe/Vienna
+      - DNS1=1.1.1.1
+      - DNS2=1.0.0.1
+      - IPv6=False
+    volumes:
+      - pihole:/etc/pihole
+      - dnsmasq:/etc/dnsmasq.d
+    cap_add:
+      - NET_ADMIN
 
 volumes:
   homebridge:
+  pihole:
+  dnsmasq:
