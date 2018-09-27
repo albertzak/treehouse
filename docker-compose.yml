@@ -21,6 +21,9 @@ services:
     depends_on:
       - broker
     command: ["mosquitto_sub", "-h", "broker", "-t", "#", "-v"]
+    volumes:
+      - pihole:/etc/pihole
+      - dnsmasq:/etc/dnsmasq.d
 
   rcswitch:
     build: ./rcswitch
