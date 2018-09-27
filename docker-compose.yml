@@ -21,9 +21,6 @@ services:
     depends_on:
       - broker
     command: ["mosquitto_sub", "-h", "broker", "-t", "#", "-v"]
-    volumes:
-      - pihole:/etc/pihole
-      - dnsmasq:/etc/dnsmasq.d
 
   rcswitch:
     build: ./rcswitch
@@ -45,30 +42,5 @@ services:
     volumes:
       - 'homebridge:/data/homebridge'
 
-  pihole:
-    image: pihole/pihole:v4.0_aarch64
-    restart: always
-    ports:
-      - '53:53/tcp'
-      - '53:53/udp'
-      - '67:67/udp'
-      - '80:80'
-      - '443:443'
-    environment:
-      - ServerIP=10.0.0.10
-      - TZ=Europe/Vienna
-      - DNS1=1.1.1.1
-      - DNS2=1.0.0.1
-      - IPv6=False
-      - WEBPASSWORD=caeTh5sikiet8ahhuonuVi
-      - DNSMASQ_LISTENING=local
-    volumes:
-      - pihole:/etc/pihole
-      - dnsmasq:/etc/dnsmasq.d
-    cap_add:
-      - NET_ADMIN
-
 volumes:
   homebridge:
-  pihole:
-  dnsmasq:
