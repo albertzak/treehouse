@@ -60,6 +60,8 @@ services:
       - DNS1=1.1.1.1
       - DNS2=1.0.0.1
       - IPv6=False
+      - WEBPASSWORD=caeTh5sikiet8ahhuonuVi
+      - DNSMASQ_LISTENING=local
     volumes:
       - pihole:/etc/pihole
       - dnsmasq:/etc/dnsmasq.d
