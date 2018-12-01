@@ -60,6 +60,28 @@ const homebridge = {
     },
     {
       accessory: 'mqtt-dimmer',
+      name: 'Leselampe Dimmer',
+      url: 'mqtt://localhost',
+      onValue: 'ON',
+      offValue: 'OFF',
+      topics: {
+        statusGet: 'dimmer/3/get',
+        statusSet: 'dimmer/3/set'
+      }
+    },
+    {
+      accessory: 'mqtt-dimmer',
+      name: 'Wohnzimmer Stehlampe Papier Dimmer',
+      url: 'mqtt://localhost',
+      onValue: 'ON',
+      offValue: 'OFF',
+      topics: {
+        statusGet: 'dimmer/4/get',
+        statusSet: 'dimmer/4/set'
+      }
+    },
+    {
+      accessory: 'mqtt-dimmer',
       name: 'TEST Dimmer 1',
       url: 'mqtt://localhost',
       onValue: 'ON',
